@@ -11,10 +11,10 @@ fetch('data.json')
 /**
 * 用語を日本語に翻訳する関数
 */
-function myReplace(node, str) {
+function myReplace(node) {
   if (node.nodeType ===  Node.TEXT_NODE) {
-    if (str in jsonData) {
-      node.textContent = node.textContent.replace(new RegExp(str, "g"), jsonData[str]);
+    for (i in jsonData) {
+      node.textContent = node.textContent.replace(new RegExp(str, "g"), jsonData[i]);
     }
   } else {
     node.childNodes.forEach(myReplace);
