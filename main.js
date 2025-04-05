@@ -13,7 +13,9 @@ fetch('data.json')
 */
 function myReplace(node, str) {
   if (node.nodeType ===  Node.TEXT_NODE) {
-    node.textContent = node.textContent.replace(new RegExp(str, "g"), json[str]);
+    if (str in jsonData) {
+      node.textContent = node.textContent.replace(new RegExp(str, "g"), jsonData[str]);
+    }
   } else {
     node.childNodes.forEach(myReplace);
   }
