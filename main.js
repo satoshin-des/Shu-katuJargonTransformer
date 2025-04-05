@@ -6,6 +6,7 @@ function myReplace(node) {
     for (const str in DATA) {
       const regex = new RegExp(str, "g");
       node.textContent = node.textContent.replace(regex, DATA[str]);
+      console.log(regex);
     }
   } else {
     node.childNodes.forEach(myReplace);
@@ -13,5 +14,6 @@ function myReplace(node) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("here");
   myReplace(document.body);
 });
