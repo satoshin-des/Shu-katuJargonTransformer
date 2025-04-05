@@ -3,8 +3,9 @@
 */
 function myReplace(node) {
   if (node.nodeType ===  Node.TEXT_NODE) {
-    for (str in DATA) {
-      node.textContent = node.textContent.replace(new RegExp(str, "g"), DATA[str]);
+    for (const str in DATA) {
+      const regex = new RegExp(str, "g");
+      node.textContent = node.textContent.replace(regex, DATA[str]);
     }
   } else {
     node.childNodes.forEach(myReplace);
@@ -12,5 +13,5 @@ function myReplace(node) {
 }
 
 window.onload = function () {
-    myReplace(document.body);
+  myReplace(document.body);
 }
