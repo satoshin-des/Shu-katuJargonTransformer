@@ -9,7 +9,7 @@
             "matches": [
                 "<all_urls>"
             ],
-            "js": ["main.js"]
+            "js": ["data.js", "main.js"]
         }
     ],
     "homepage_url": "https://github.com/satoshin-des/Shu-katuJargonTransformer"
