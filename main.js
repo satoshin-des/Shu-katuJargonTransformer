@@ -1,17 +1,17 @@
 /**
 * 用語を日本語に翻訳する関数
 */
-function myReplace(node, str) {
+function myReplace(node) {
   if (node.nodeType ===  Node.TEXT_NODE) {
-    const regex = new RegExp(str, "g");
-    node.textContent = node.textContent.replace(regex, DATA[str]);
+    for (const str in DATA) {
+      const regex = new RegExp(str, "g");
+      node.textContent = node.textContent.replace(regex, DATA[str]);
+    }
   } else {
     node.childNodes.forEach(myReplace);
   }
 }
 
 window.onload = function () {
-  for (const str in DATA) {
-    myReplace(document.body, str);
-  }
+  myReplace(document.body);
 }
