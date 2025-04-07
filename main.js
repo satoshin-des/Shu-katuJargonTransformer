@@ -4,8 +4,9 @@
 function myReplace(node) {
   if (node.nodeType === Node.TEXT_NODE) {
     for (const str in DATA) {
-      node.textContent = node.textContent.replace(RegExp(str, "g"), DATA[str]);
-      console.log(str);
+      if(node.textContent.indexOf(str) !== -1) {
+        node.textContent = node.textContent.replace(RegExp(str, "g"), DATA[str]);
+      }
     }
   } else {
     node.childNodes.forEach(myReplace);
