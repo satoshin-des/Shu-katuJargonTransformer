@@ -4,6 +4,9 @@
     "manifest_version": 3,
     "author": "satoshin",
     "description": "就活等で出くわすIT用語などを日本語に翻訳してくれる拡張機能．",
+    "action": {
+        "default_popup": "popup.html"
+    },
     "content_scripts": [
         {
             "matches": [
