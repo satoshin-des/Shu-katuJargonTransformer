@@ -1,7 +1,7 @@
-const IGNORE_DATA = {
+const IGNORE_DATA = [
   "LICENSE",
   "HTML"
-}
+]
 
 const DATA = {
   "DevSecOps" : "開発・運用・セキュリティ連携",
