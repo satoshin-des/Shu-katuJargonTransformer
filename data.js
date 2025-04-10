@@ -1,6 +1,7 @@
 const IGNORE_DATA = [
-  "LICENSE",
-  "HTML"
+  "HTML",
+  "JSON",
+  "LICENSE"
 ]
 
 const DATA = {
@@ -68,6 +69,7 @@ const DATA = {
   "ICT" : "情報通信技術",
   "IDE" : "統合開発環境",
   "IoT" : "モノのインターネット",
+  "IOT" : "モノのインターネット",
   "IPC" : "プロセス間通信",
   "LLM" : "大規模言語モデル",
   "MGR" : "マネージャ",
