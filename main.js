@@ -3,6 +3,12 @@
 */
 function myReplace(node) {
   if (node.nodeType === Node.TEXT_NODE) {
+    for (const str in IGNORE_DATA) {
+      if(node.textContent.indexOf(str) !== -1) {
+        node.textContent = node.textContent.replace(RegExp(str, "g"), str.split('').join("@@!!##visited##!!@@"));
+      }
+    }
+    
     for (const str in DATA) {
       if(node.textContent.indexOf(str) !== -1) {
         node.textContent = node.textContent.replace(RegExp(str, "g"), str.split('').join("@@!!##visited##!!@@") + "（" + DATA[str] + "）");
