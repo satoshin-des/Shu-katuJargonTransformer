@@ -132,6 +132,7 @@ const DATA = {
   "SP" : "スマートフォン",
   "SR" : "代替現実",
   "UE" : "Unreal Engine",
+  "UI" : "ユーザ・インターフェイス",
   "UX" : "ユーザ・エクスペリエンス",
   "VB" : "Visual Basic",
   "VC" : "Visual C++",
